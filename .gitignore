@@ -1,0 +1,50 @@
+# --- secrets & keys (never commit) ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+id_*
+*credentials*
+*secret*
+config/limits.local.yaml
+
+# --- environments ---
+ai_env/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# --- data (fetched via manifest, versioned with DVC) ---
+data/raw/
+data/parsed/
+data/interim/
+*.pdf
+*.parquet
+*.duckdb
+*.sqlite
+*.db
+
+# --- tool outputs ---
+mlruns/
+mlartifacts/
+.phoenix/
+.prefect/
+qdrant_storage/
+logs/
+*.log
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- OS / editor ---
+.DS_Store
+.vscode/
+.idea/

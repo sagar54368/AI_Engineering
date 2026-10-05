@@ -1,0 +1,92 @@
+# Project 1 (NiveshRAG) — Python deps for ai_env (Python 3.12)
+# Install: uv pip install --python ai_env/bin/python --exclude-newer <7-days-ago> -r requirements/p1.in
+# Lock:    uv pip freeze --python ai_env/bin/python > requirements/p1.lock.txt
+
+# core
+pydantic
+pydantic-settings
+httpx
+tenacity
+pyyaml
+structlog
+typer
+
+# data
+pandas
+pyarrow
+duckdb
+sqlglot
+pandera
+datasketch
+rapidfuzz
+
+# PDF parsing
+docling
+pymupdf
+pymupdf4llm
+pdfplumber
+
+# embeddings / retrieval
+torch
+sentence-transformers
+transformers
+faiss-cpu
+qdrant-client
+fastembed
+bm25s
+
+# LLM / frameworks
+litellm!=1.82.7,!=1.82.8   # malicious PyPI releases (Mar 2026)
+google-genai
+ollama
+instructor
+langchain
+langchain-core
+langchain-text-splitters
+langchain-qdrant
+langchain-google-genai
+langchain-ollama
+langchain-nvidia-ai-endpoints
+langchain-groq
+langgraph
+langgraph-checkpoint-sqlite
+langsmith
+
+# eval / tracking / tracing
+ragas
+langchain-community==0.4.1   # ragas 0.4.3 imports chat_models.vertexai, removed in 0.4.2
+en_core_web_md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl   # spaCy model for Presidio
+ranx
+mlflow
+arize-phoenix-otel
+openinference-instrumentation-langchain
+openinference-instrumentation-litellm
+
+# serving / pipelines
+fastapi
+uvicorn
+streamlit
+prometheus-fastapi-instrumentator
+prefect
+
+# guardrails / PII
+presidio-analyzer
+presidio-anonymizer
+
+# classic ML / drift
+scikit-learn
+setfit
+evidently
+
+# dev
+ruff
+mypy
+pytest
+pytest-asyncio
+pytest-cov
+hypothesis
+respx
+jupyterlab
+ipykernel
+nbstripout
+pre-commit
